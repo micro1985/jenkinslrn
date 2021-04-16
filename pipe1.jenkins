@@ -19,5 +19,10 @@ pipeline {
 				sh 'ssh root@192.168.234.196 \'fdisk -l\''
 			}
 		}
+		stage("Datw") {
+			steps {
+				sh 'ssh root@192.168.234.196 \'date\''
+			}
+		}
 	}
 }
