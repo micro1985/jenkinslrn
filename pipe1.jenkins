@@ -1,0 +1,10 @@
+pipeline {
+	agent any
+	stages {
+		stage(""Connect check") {
+			steps {
+				sh 'ssh root@192.168.234.196 \'hostname\''
+			}
+		}
+	}
+}
