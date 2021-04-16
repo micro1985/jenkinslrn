@@ -11,5 +11,10 @@ pipeline {
 				sh 'ssh root@192.168.234.196 \'uptime\''
 			}
 		}
+		stage("Disks") {
+			steps {
+				sh 'ssh root@192.168.234.196 \'fdisk -l\''
+			}
+		}
 	}
 }
