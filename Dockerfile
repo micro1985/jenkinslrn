@@ -1,5 +1,4 @@
 FROM ubuntu:18.04
-
 ENV CATALINA_HOME /usr/share/apache-tomcat-9.0.46
 ENV PATH $CATALINA_HOME/bin:$PATH
 
