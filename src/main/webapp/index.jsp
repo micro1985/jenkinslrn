@@ -3,7 +3,7 @@
     <title>Boxfuse Sample App: success!</title>
 </head>
 <body style="text-align: center">
-<h1>WAAAAAAAAAAAAAAAAAAAZZZZZZZZZZZZZZZZZUUUUUUUUUUUUUUUUUUUUUUUUPPPPPPPPPPPPPPPP????????????????!</h1>
+<h1>WAAAAAAAAAAAAAZZZZZZZZZZZZZZZUUUUUUUUUUUUUUUUUPPPPPPPPPPPP????????????!</h1>
 <img src="boxfuse.png">
 
 <h2>You have successfully launched your EC222 INSTAAfsdfsdgsdgsdfgsdfggdfgdfg!</h2>
