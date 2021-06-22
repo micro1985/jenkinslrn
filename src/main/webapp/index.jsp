@@ -3,7 +3,7 @@
     <title>Boxfuse Sample App: success!</title>
 </head>
 <body style="text-align: center">
-<h1>WAAAAAAAZZZZUUUUUUPPPPPPPP???????!</h1>
+<h1>WAAAAAAZZZZUUUUUPPPPPPPP???????!</h1>
 <img src="boxfuse.png">
 
 <h2>You have successfully launched your EC2 INSTANCE!</h2>
