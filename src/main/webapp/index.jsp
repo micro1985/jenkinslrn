@@ -3,10 +3,10 @@
     <title>Boxfuse Sample App: success!</title>
 </head>
 <body style="text-align: center">
-<h1>WAAAAAAAAAAAAAZZZZZZZZZZZZZUUUUUUUUUUPPPPPPPPPPPP??????????!</h1>
+<h1>WAAAAAAAAAAAAAZZZZZZZZZZZZZUUUUUUUUPPPPPPPPPPPP??????????!</h1>
 <img src="boxfuse.png">
 
-<h2>You have successfully launched your EC222 INSTAAfsdfsdgsdgsdfgsdfggdfgdfg!</h2>
+<h2>You have successfully launched your EC2 INSTANCE!</h2>
 
 <p>This Instance is running on <strong><%= System.getenv("BOXFUSE_PLATFORM_NAME") %>
 </strong> and has the id <strong><%= System.getenv("BOXFUSE_INSTANCE_ID") %>
