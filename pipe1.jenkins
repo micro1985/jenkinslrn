@@ -1,28 +1,34 @@
 pipeline {
-	agent any
-	options {
+    agent {label 'docker'}
+    
+    options {
 		timestamps()
 	}
-	stages {
-		stage("Connect check") {
-			steps {
-				sh 'ssh root@192.168.234.196 \'hostname\''
-			}
-		}
-		stage("Uptime") {
-			steps {
-				sh 'ssh root@192.168.234.196 \'uptime\''
-			}
-		}
-		stage("Disks") {
-			steps {
-				sh 'ssh root@192.168.234.196 \'fdisk -l\''
-			}
-		}
-		stage("Date") {
-			steps {
-				sh 'ssh root@192.168.234.196 \'date\''
-			}
-		}
-	}
+	
+    stages {
+        stage('Checkout GitHub') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/micro1985/jenkinslrn.git']]])
+            }
+        }
+        
+        stage('Docker build') {
+            steps {
+                sh 'docker build --tag test:$BUILD_NUMBER .'
+            }
+        }
+        stage('Docker stop') {
+            steps {
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    sh 'docker stop boxfuse'
+                }
+            }
+        }
+        stage('Docker run') {
+            steps {
+                sh 'docker run -d --rm --name boxfuse -p 8080:8080 test:$BUILD_NUMBER'
+            }
+        }
+    }
 }
+
